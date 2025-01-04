@@ -3,11 +3,15 @@ package org.example;
 public class SumCalculator {
     public int sum(int n) {
         int sum = 0;
-
-        for (int i=n;i>=n;i--){
-            sum+=n;
+        if (n == 0) {
+            throw new IllegalArgumentException();
+        } else {
+            for (int i = 0; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
         }
 
-        return sum;
     }
 }
+
